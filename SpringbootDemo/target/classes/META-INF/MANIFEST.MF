@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringbootDemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 17685
+Implementation-Vendor-Id: SpringbootDemo
+Build-Jdk: 1.8.0_51
+Implementation-URL: https://spring.io/projects/spring-boot/SpringbootD
+ emo
+Created-By: Maven Integration for Eclipse
+
