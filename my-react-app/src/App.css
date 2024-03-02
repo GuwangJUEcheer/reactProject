@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.active {
+  color: red; /* 活动链接的颜色 */
+  text-decoration: none; /* 可以去掉下划线 */
+}
+
+/* 导航栏整体样式 */
+nav {
+  background-color: #333; /* 深色背景 */
+  padding: 10px 0; /* 上下填充 */
+}
+
+/* 列表样式 */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 中心对齐 */
+  align-items: center;
+}
+
+/* 列表项和链接样式 */
+nav ul li {
+  margin: 0 20px; /* 增加左右间距 */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* 白色文本 */
+  padding: 5px 10px; /* 文本填充 */
+  border-radius: 5px; /* 轻微的圆角效果 */
+  transition: background-color 0.3s; /* 平滑背景色过渡 */
+}
+
+/* 链接悬停和激活状态样式 */
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #007bff; /* 悬停或激活时的背景色 */
+}
+
+
+

@@ -1,37 +1,41 @@
-/* LoginPage.css */
-.login-container {
+/* register.css */
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw; /* 视口宽度 */
-    height: 100vh; /* 视口高度 */
-    background-color: #f5f5f5; /* 背景色 */
+    height: 100vh;
+    background-color: #f0f2f5;
 }
 
-.login-form {
+.register-form {
     padding: 20px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* 自动根据内容调整宽度 */
-    max-width: 400px; /* 最大宽度，可根据需要调整 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .input-group {
     margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
 }
 
 .input-group label {
+    display: block;
     margin-bottom: 5px;
 }
 
 .input-group input {
+    width: 100%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* 确保padding不会影响到元素的最终尺寸 */
 }
 
 button {
@@ -42,7 +46,8 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 button:hover {
