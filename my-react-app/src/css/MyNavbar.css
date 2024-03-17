@@ -8,8 +8,33 @@
   }
 
   .nav-link{
-    margin-left:30px;
-    margin-right:px;
+    margin-left:15px;
     font-weight: bold;
   }
   
+  .d-flex{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    height: 30px;
+  }
+
+  .custom-form {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+  }
+
+  .custom-search-button {
+    border: none;
+    overflow: visible;
+    text-transform: none; /* 取消文本转换 */
+    display: inline-block; /* 确保按钮以内联块级元素显示 */
+  }
+  
+  .custom-search-button:focus {
+    outline: none; /* 删除聚焦时的轮廓线，如果需要 */
+  }
+  
+  .justify-content-end{
+    margin-right: 30px;
+  }
