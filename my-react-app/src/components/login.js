@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import '../css/login.css'; // 引入样式文件
 import { Modal, Button, Form } from 'react-bootstrap';
@@ -20,6 +20,17 @@ const Login = ({ show, onHide }) => {
         userName: '',
         password: '',
     });
+
+    // 自动隐藏登录失败提示
+    useEffect(() => {
+        let timer;
+        if (loginFailed) {
+            timer = setTimeout(() => {
+                setLoginFailed(false);
+            }, 5000); // 5秒后自动隐藏提示
+        }
+        return () => clearTimeout(timer); // 清除计时器
+    }, [loginFailed]);//LoginFailed是只要变化就会触发userEffect
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,7 +62,7 @@ const Login = ({ show, onHide }) => {
     };
 
     return (
-        <Modal show={show} onHide={onHide} backdrop="static" keyboard={false} centered>
+        <Modal show={show} onHide={() => { onHide(); setLoginFailed(false); }} backdrop="static" keyboard={false} centered>
             <Modal.Header closeButton>
                 <Modal.Title style={{ fontWeight: 'bold' }}>登录</Modal.Title>
             </Modal.Header>

@@ -18,7 +18,16 @@ axiosInstance.interceptors.request.use(
       return config;
   },
   (error) => {
-    return Promise.reject(error);
+    if (error.response.status === 401) {
+      // 清理本地 token 和状态
+      localStorage.removeItem('token');
+      // 可能需要清理其他状态
+
+      // 重定向到登录页面
+      const history = useHistory();
+      history.push('/login');
+  }
+  return Promise.reject(error);
   }
 );
 
